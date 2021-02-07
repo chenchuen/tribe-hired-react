@@ -72,7 +72,6 @@ const Home = (props) => {
     return (
         <div>
             <Card style={{ width: 1000, margin: 40 }}>
-                <Label>Search</Label>
                 <Input
                     onChange={e => setSearch(e.target.value)}
                     style={{ margin: 20, width: '96%' }}
