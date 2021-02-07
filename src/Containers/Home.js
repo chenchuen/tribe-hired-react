@@ -28,7 +28,7 @@ const Home = (props) => {
                 {_.keys(records[0]).map((attribute) => {
                     return (
                         <th key={attribute} style={{ whiteSpace: "nowrap", backgroundColor: "#fff" }}>
-                            {`table.${attribute}`}
+                            {`${attribute}`}
                         </th>
                     );
                 })}
@@ -71,25 +71,27 @@ const Home = (props) => {
 
     return (
         <div>
-            <Label>Search</Label>
-            <Input
-                onChange={e => setSearch(e.target.value)}
-                style={{ marginBottom: 10 }}
-                value={search}
-                type='email'
-                placeholder='Whats the name?'
-            />
-            <Button
-                color='primary'
-                style={{ marginTop: 20 }}
-                onClick={onSubmit}
-            >
-                Search
-            </Button>
+            <Card style={{ width: 1000, margin: 40 }}>
+                <Label>Search</Label>
+                <Input
+                    onChange={e => setSearch(e.target.value)}
+                    style={{ margin: 20, width: '96%' }}
+                    value={search}
+                    type='email'
+                    placeholder='Whats the name?'
+                />
+                <Button
+                    color='primary'
+                    style={{ margin: 20 }}
+                    onClick={onSubmit}
+                >
+                    Search
+                </Button>
 
-            <Card body>
-                <CardTitle>User search</CardTitle>
-                {renderTable()}
+                <Card body>
+                    <CardTitle>User search</CardTitle>
+                    {renderTable()}
+                </Card>
             </Card>
         </div >
     );
