@@ -44,14 +44,14 @@ const Login = (props) => {
                         style={{ marginBottom: 10 }}
                         value={username}
                         type='email'
-                        placeholder='is gme going to the moon?'
+                        placeholder='your email'
                     />
                     <Label>Password</Label>
                     <Input
                         onChange={e => setPassword(e.target.value)}
                         value={password}
                         type='password'
-                        placeholder='10,000 or bust'
+                        placeholder='your password'
                     />
 
                     <Button
