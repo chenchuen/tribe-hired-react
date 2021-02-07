@@ -13,17 +13,21 @@ const Login = (props) => {
         // call ur api here bitch i dont wanna implement redux bc fk u
         console.log(props);
         axios.post('http://localhost:8000/api/auth/login',
-        {
-            email: username,
-            password: password
-        })
-        .then(response => {
-            localStorage.setItem('authToken', response.data.token);
-            history.replace('/');
-        })
-        .catch(error => {
-            
-        });
+            {
+                email: username,
+                password: password
+            })
+            .then(response => {
+                localStorage.setItem('authToken', response.data.token);
+                history.replace('/');
+            })
+            .catch(error => {
+
+            });
+    }
+
+    const gotoSignUp = () => {
+        history.replace('/signup');
     }
 
     return (
@@ -56,6 +60,14 @@ const Login = (props) => {
                         onClick={onSubmit}
                     >
                         Login
+                    </Button>
+
+                    <Button
+                        color='primary'
+                        style={{ marginTop: 20, marginLeft: 20 }}
+                        onClick={gotoSignUp}
+                    >
+                        Sign Up
                     </Button>
                 </CardBody>
             </Card>

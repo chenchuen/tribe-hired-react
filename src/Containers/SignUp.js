@@ -64,7 +64,7 @@ const SignUp = (props) => {
                         style={{ marginTop: 20 }}
                         onClick={onSubmit}
                     >
-                        Login
+                        SignUp
                     </Button>
                 </CardBody>
             </Card>
